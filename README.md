@@ -1,1 +1,2 @@
-# DBMS_OnlineRetailStore
+# NexusMart
+An online retail store application
