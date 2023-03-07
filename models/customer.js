@@ -8,6 +8,10 @@ const Customer = db.define('Customer', {
         email: {
             type: db.Sequelize.STRING,
             allowNull: false
+        },
+        password: {
+            type: db.Sequelize.STRING,
+            allowNull: false
         }
     }
 );
