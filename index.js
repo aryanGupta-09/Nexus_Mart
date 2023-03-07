@@ -1,8 +1,13 @@
 const express = require("express");
+const bodyParser = require('body-parser');
+const cookieParser = require("cookie-parser");
 const app = express();
 const port = 666;
 const expressLayouts = require("express-ejs-layouts");
 const db = require("./config/sequelize");
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
 
 app.use(express.static("./assets"));
 
