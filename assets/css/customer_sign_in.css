@@ -1,14 +1,11 @@
-body {
+body .signinBox {
   display: flex;
-  align-items: center; }
-  body .signinBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    height: 400px;
-    background-color: antiquewhite;
-    color: black; }
-    body .signinBox .inputBox {
-      margin-bottom: 15px;
-      width: 200px; }
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  background-color: antiquewhite;
+  color: black; }
+  body .signinBox .inputBox {
+    margin-bottom: 15px;
+    width: 200px; }
