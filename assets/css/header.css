@@ -14,7 +14,10 @@ body {
     left: 0;
     right: 0;
     background-color: #313174; }
+  body #homeLink:hover {
+    text-decoration: none; }
   body #NexusMartLogo {
+    margin-top: 5px;
     display: flex;
     align-items: center;
     margin-left: 5px;
@@ -73,9 +76,9 @@ body {
       width: 50px;
       margin-right: 10px;
       padding: 0;
-      background-color: black; }
-      body .rightSection .profile_image color:aliceblue
-.pfp {
+      background-color: black;
+      color: aliceblue; }
+      body .rightSection .profile_image .pfp {
         height: 30px;
         border-radius: 33px;
         justify-content: center; }

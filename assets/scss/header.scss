@@ -17,12 +17,20 @@ body {
         background-color: rgb(49, 49, 116);
     }
 
+    #homeLink {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     #NexusMartLogo {
+        margin-top: 5px;
         display: flex;
         align-items: center;
         margin-left: 5px;
         width: 150px;
         margin-right: 10px;
+
     }
 
     .searchSection {
@@ -77,40 +85,42 @@ body {
         display: flex;
         align-items: center;
 
-        .shoppingcart{
+        .shoppingcart {
             height: 100%;
             display: flex;
             margin-left: 0px;
             align-items: center;
             justify-content: center;
-        
+
             width: 50px;
             margin: 0%;
-            margin-right: 10px;    
+            margin-right: 10px;
             background-color: aliceblue;
         }
-        .profile_image{
-        
+
+        .profile_image {
+
             height: 100%;
             display: flex;
             margin-left: 0px;
             align-items: center;
             justify-content: center;
-            
+
             width: 50px;
-            margin-right: 10px;    
+            margin-right: 10px;
             padding: 0;
             background-color: black;
-            color:aliceblue
-            .pfp{
-        
+            color: aliceblue;
+
+            .pfp {
+
                 height: 30px;
-                border-radius:33px;
+                border-radius: 33px;
                 justify-content: center;
-            
+
             }
         }
-        
+
     }
-    
+
 }
