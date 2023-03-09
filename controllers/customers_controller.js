@@ -8,6 +8,10 @@ module.exports.profile = function(req, res){
 
 // render the sign up page
 module.exports.signUp = function(req, res){
+    if(req.isAuthenticated()){
+        return res.redirect("/customers/profile");
+    }
+
     return res.render("customer_sign_up", {
         title: "NexusMart | Sign Up"
     });
@@ -15,6 +19,10 @@ module.exports.signUp = function(req, res){
 
 // render the sign in page
 module.exports.signIn = function(req, res){
+    if(req.isAuthenticated()){
+        return res.redirect("/customers/profile");
+    }
+
     return res.render("customer_sign_in", {
         title: "NexusMart | Sign In"
     });
@@ -38,5 +46,5 @@ module.exports.create = async function(req, res){
 
 // sign in and create a session for the customer
 module.exports.createSession = function(req, res){
-    
+    return res.redirect("/");
 }
