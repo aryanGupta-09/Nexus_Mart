@@ -16,8 +16,8 @@ const Customer = db.define('Customer', {
     }
 );
 
-db.sync({force: true}).then(() => {
-    console.log('Customer table created successfully!');
+db.sync().then(() => {
+    console.log('Customer table created/accessed successfully!');
  }).catch((error) => {
     console.error('Unable to create table Customer: ', error);
  }); 
