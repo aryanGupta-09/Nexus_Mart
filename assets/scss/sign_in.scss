@@ -1,4 +1,5 @@
 body {
+    
     .outerBox {
         display: flex;
         flex-direction: column;
@@ -19,13 +20,22 @@ body {
                     background-color: beige;
                     margin-bottom: 15px;
                     width: 200px;
+                    &:hover{
+                        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+                        cursor: pointer;
+                    }
                 }
             }
             .Sign_up{
     
                 width: 200px;
                 background-color: beige;
+                &:hover{
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+                    cursor: pointer;
+                }
             }
+
         }
 
 

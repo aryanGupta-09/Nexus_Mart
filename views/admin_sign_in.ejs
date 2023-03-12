@@ -1,17 +1,14 @@
 <link rel="stylesheet" type="text/css" href="/css/sign_in.css">
 <div class="outerBox">
     <h1 style="color: rgb(10, 94, 94);">Sign In</h1>
-    
-    <form action="/customers/create-session" method="post">
-        <div class="signinBox">
+
+    <form action="/admin/create-session" method="post">
+        <div class="signinBox" style="height: 150px;">
             <input style="margin-top: 10px; margin-bottom: 10px; width: 200px" type="email" name="email"
                 placeholder="Email" required>
             <input style="margin-bottom: 10px; width: 200px" type="password" name="password" placeholder="Password"
                 required>
             <input class="inputBox" style="margin-bottom: 12px;" type="submit" value="Sign In">
-            <p style="font-size: 13px; margin-bottom: -2px; color: antiquewhite;">If you don't have an account</p>
-
         </div>
     </form>
-    <a href="/customers/sign-up" style="margin-top: -48px;"><button class="Sign_up">Sign up</button></a>
 </div>
