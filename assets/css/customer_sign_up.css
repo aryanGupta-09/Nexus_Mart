@@ -16,8 +16,20 @@ body .outerBox {
       background-color: white;
       margin-bottom: 15px;
       width: 200px; }
+    body .outerBox .signupBox .Sign_up {
+      background-color: beige;
+      margin-bottom: 10px;
+      width: 200px;
+      font-size: 15px;
+      padding: 2.5px; }
+      body .outerBox .signupBox .Sign_up:hover {
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        cursor: pointer; }
   body .outerBox .Sign_in {
     font-size: 15px;
     padding: 2.5px;
     width: 200px;
     background-color: beige; }
+    body .outerBox .Sign_in:hover {
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+      cursor: pointer; }

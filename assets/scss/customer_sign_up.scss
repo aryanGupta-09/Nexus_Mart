@@ -20,12 +20,27 @@ body {
                 margin-bottom: 15px;
                 width: 200px;
             }
+            .Sign_up{
+                background-color: beige;
+                margin-bottom: 10px; 
+                width: 200px; 
+                font-size: 15px; 
+                padding: 2.5px;
+                &:hover{
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+                    cursor: pointer;
+                }
+            }
         }
         .Sign_in{
             font-size: 15px;
             padding: 2.5px;
             width: 200px;
             background-color: beige;
+            &:hover{
+                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+            }
         }
     }
 }
