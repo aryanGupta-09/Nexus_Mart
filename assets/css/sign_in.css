@@ -1,0 +1,27 @@
+body .outerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  body .outerBox .signinBox {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 210px;
+    background-color: #0a5e5e;
+    color: black;
+    border-radius: 5px; }
+    body .outerBox .signinBox .inputBox {
+      background-color: beige;
+      margin-bottom: 15px;
+      width: 200px; }
+      body .outerBox .signinBox .inputBox:hover {
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        cursor: pointer; }
+  body .outerBox .Sign_up {
+    width: 200px;
+    background-color: beige; }
+    body .outerBox .Sign_up:hover {
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+      cursor: pointer; }
