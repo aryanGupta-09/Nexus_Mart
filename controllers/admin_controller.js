@@ -10,11 +10,13 @@ module.exports.profile = function(req, res){
 module.exports.signIn = function(req, res){
     if(req.isAuthenticated()){
         console.log("Successful");
-        return res.redirect("/admin/profile");
+        return res.redirect("/admin/profile", {
+            title: "Admin | Profile", layout: "./adminlayout"
+        });
     }
 
     return res.render("admin_sign_in", {
-        title: "NexusMart | Sign In"
+        title: "Admin | Sign In", layout: "./adminlayout"
     });
 }
 
