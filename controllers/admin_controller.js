@@ -11,12 +11,12 @@ module.exports.signIn = function(req, res){
     if(req.isAuthenticated()){
         console.log("Successful");
         return res.redirect("/admin/profile", {
-            title: "Admin | Profile", layout: "./adminlayout"
+            title: "Admin | Profile", layout: "./admin_layout"
         });
     }
 
     return res.render("admin_sign_in", {
-        title: "Admin | Sign In", layout: "./adminlayout"
+        title: "Admin | Sign In", layout: "./admin_layout"
     });
 }
 
