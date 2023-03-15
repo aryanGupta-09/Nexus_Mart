@@ -2,7 +2,8 @@ const Admin = require("../models/admin");
 
 module.exports.profile = function(req, res){
     return res.render("admin_profile", {
-        title: "Admin Profile"
+        title: "Admin Profile",
+        layout: "./admin_layout"
     });
 }
 
@@ -22,13 +23,13 @@ module.exports.signIn = function(req, res){
 
 // sign in and create a session for the admin
 module.exports.createSession = function(req, res){
-    return res.redirect("/");
+    return res.redirect("/admin/profile");
 }
 
 // sign out and destroy the session for the admin
 module.exports.destroySession = function(req, res){
     req.logout(function(err){
         if(err){console.log("error in logging out"); return next(err);}
-        return res.redirect("/");
+        return res.redirect("/admin/sign-in");
     });
 }
