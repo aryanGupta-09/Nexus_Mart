@@ -1,0 +1,22 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a5e5e;
+  margin-bottom: 10px; }
+  .Header .heading {
+    color: beige;
+    margin-left: 10px; }
+  .Header .buttonClass {
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 90px;
+    background-color: beige;
+    color: #0a5e5e;
+    border: 2px;
+    transition: opacity 0.15s, box-shadow 0.25s; }
+    .Header .buttonClass:hover {
+      opacity: 0.8;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); }
+    .Header .buttonClass:active {
+      opacity: 0.5; }
