@@ -10,10 +10,7 @@ module.exports.profile = function(req, res){
 // render the sign in page
 module.exports.signIn = function(req, res){
     if(req.isAuthenticated()){
-        console.log("Successful");
-        return res.redirect("/admin/profile", {
-            title: "Admin | Profile", layout: "./admin_layout"
-        });
+        return res.redirect("/admin/profile");
     }
 
     return res.render("admin_sign_in", {
