@@ -1,0 +1,33 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(10, 94, 94) ;
+    margin-bottom: 10px;
+
+    .heading {
+        color: beige;
+        margin-left: 10px;
+    }
+
+    .buttonClass {
+        border-radius: 5px;
+        margin-right: 10px;
+        width: 90px;
+        background-color: beige;
+        color: rgb(10, 94, 94);
+        border: 2px;
+        transition: opacity 0.15s,
+            box-shadow 0.25s;
+
+        &:hover {
+            opacity: 0.8;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+}
