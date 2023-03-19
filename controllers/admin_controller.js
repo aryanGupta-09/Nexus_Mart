@@ -7,6 +7,13 @@ module.exports.profile = function(req, res){
     });
 }
 
+module.exports.modifyProductCategory = function(req, res){
+    return res.render("modify_product_category", {
+        title: "Modify Product Category",
+        layout: "./admin_layout"
+    });
+}
+
 // render the sign in page
 module.exports.signIn = function(req, res){
     if(req.isAuthenticated()){

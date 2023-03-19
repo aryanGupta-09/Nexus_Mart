@@ -6,6 +6,8 @@ const adminController = require("../controllers/admin_controller");
 
 router.get("/profile", passport.checkAdminAuth, adminController.profile);
 
+router.get("/modify-product-category", passport.checkAdminAuth, adminController.modifyProductCategory);
+
 router.get("/sign-in", adminController.signIn);
 
 // use passport as a middleware to authenticate
