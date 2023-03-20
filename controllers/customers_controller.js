@@ -1,9 +1,14 @@
 const Customer = require("../models/customer");
 
-module.exports.profile = function(req, res){
-    return res.render("customer_profile", {
-        title: "Customer Profile"
-    });
+module.exports.profile = async function(req, res){
+    const customer = await Customer.findByPk(req.params.id);
+    if(customer==null){console.log("error in finding customer while rendering profile"); return;}
+    else{
+        return res.render("customer_profile", {
+            title: "NexusMart | Profile",
+            profile_customer: customer
+        });
+    }
 }
 
 // render the sign up page

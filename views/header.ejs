@@ -20,10 +20,15 @@
             scart
         </div>
         <div class="profile_image">
-            <a href="/customers/profile">
-                <img src="/images/blank-profile-picture-973460_1280.webp"  class="pfp">
-            </a>
-            
+            <% if(locals.user){ %>
+                <a href="/customers/profile/<%= user.id %>">
+                    <img src="/images/blank-profile-picture-973460_1280.webp"  class="pfp">
+                </a>
+            <% }else{ %>
+                <a href="/customers/sign-in">
+                    <img src="/images/blank-profile-picture-973460_1280.webp"  class="pfp">
+                </a>
+            <% } %>
         </div>
     </div>
 
