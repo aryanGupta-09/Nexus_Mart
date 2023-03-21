@@ -1,6 +1,8 @@
 <link rel="stylesheet" type="text/css" href="/css/admin_profile.css">
 <div class="Header">
-    <a href="/admin/profile" id="homelink"><div class="heading"> Hello Admin </div></a>    
+    <a href="/admin/profile" id="homelink">
+        <div class="heading"> Hello Admin </div>
+    </a>
     <a href="/admin/sign-out"><button class="buttonClass"> Sign out </button></a>
 
 </div>
@@ -10,9 +12,33 @@
     </p>
     <div class="buttonDiv">
         <a href="/admin/modify-product-category">
-            <button class="buttonClass">Modify Product Category</button>
+            <button class="buttonClass">Add Product Category</button>
         </a>
-        
-        <button class="buttonClass">Modify Product</button>
     </div>
+    <table class="table table-hover" style="margin: 20px;">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+                <th scope="col" style="color: red">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% var i = 1 %>
+            <% for(cat of categories){ %>
+
+                <tr>
+                    <th scope="row"><%=i %></th>
+                    <td>
+                        <img src="<%=cat.image%>" alt="" class="imgsize">
+                        <%=cat.name%>
+                    </td>
+                    <td><%=cat.description%></td>
+                    <td><img src="/images/trash-bin-delete.png" alt="" class="cross" style="width: 40px;" ></td>
+                </tr>
+                <%i+=1%>
+                <% } %>
+        </tbody>
+    </table>
 </div>

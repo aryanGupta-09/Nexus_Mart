@@ -34,7 +34,7 @@ module.exports.addProductCategory = async function(req, res){
             }
         }
 
-        return res.redirect("back");
+        return res.redirect("/admin/profile");
     });
 }
 
