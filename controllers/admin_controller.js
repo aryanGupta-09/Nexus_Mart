@@ -3,10 +3,12 @@ const Product_Category = require("../models/product_category");
 const fs = require("fs");
 const path = require("path");
 
-module.exports.profile = function(req, res){
+module.exports.profile = async function(req, res){
+    let categories = await Product_Category.findAll({order: [["createdAt", "ASC"]]});
     return res.render("admin_profile", {
         title: "Admin Profile",
-        layout: "./admin_layout"
+        layout: "./admin_layout",
+        categories: categories
     });
 }
 
