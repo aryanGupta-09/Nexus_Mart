@@ -1,4 +1,7 @@
 const Admin = require("../models/admin");
+const Product_Category = require("../models/product_category");
+const fs = require("fs");
+const path = require("path");
 
 module.exports.profile = function(req, res){
     return res.render("admin_profile", {
@@ -11,6 +14,25 @@ module.exports.modifyProductCategory = function(req, res){
     return res.render("modify_product_category", {
         title: "Modify Product Category",
         layout: "./admin_layout"
+    });
+}
+
+module.exports.addProductCategory = async function(req, res){
+    Product_Category.uploadedImage(req, res, async function(err){
+        if(err){console.log("*****Multer error", err);}
+        
+        let category = await Product_Category.findOne({where: {name: req.body.name}});
+        if(!category){
+            const newCategory = await Product_Category.create(req.body);
+            if(newCategory==null){console.log("error in creating new category"); return;}
+
+            if(req.file){
+                newCategory.image = Product_Category.imagePath + "/" + req.file.filename;
+                await newCategory.save();
+            }
+        }
+
+        return res.redirect("back");
     });
 }
 
