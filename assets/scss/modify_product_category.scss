@@ -6,10 +6,16 @@
     background-color: rgb(10, 94, 94);
     margin-bottom: 10px;
 
-    .heading {
-        color: beige;
-        font-size: 35px;
-        margin-left: 10px;
+    #homelink{
+        .heading {
+            color: beige;
+            font-size: 35px;
+            margin-left: 10px;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+        
     }
 }
 

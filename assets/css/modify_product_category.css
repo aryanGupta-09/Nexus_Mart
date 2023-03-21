@@ -5,10 +5,12 @@
   height: 50px;
   background-color: #0a5e5e;
   margin-bottom: 10px; }
-  .Header .heading {
+  .Header #homelink .heading {
     color: beige;
     font-size: 35px;
     margin-left: 10px; }
+  .Header #homelink:hover {
+    text-decoration: none; }
 
 .addProduct {
   --innerwidth: 300px;

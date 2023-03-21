@@ -5,10 +5,12 @@ body .Header {
   height: 50px;
   background-color: #0a5e5e;
   margin-bottom: 10px; }
-  body .Header .heading {
+  body .Header #homelink .heading {
     color: beige;
     font-size: 35px;
     margin-left: 10px; }
+  body .Header #homelink:hover {
+    text-decoration: none; }
   body .Header .buttonClass {
     border-radius: 5px;
     margin-right: 10px;
