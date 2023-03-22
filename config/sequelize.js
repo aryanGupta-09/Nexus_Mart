@@ -1,7 +1,7 @@
 const sequelize = require("sequelize");
 
 const db = new sequelize(
-   "NexusMart",
+   "Nexus_Mart",
    "user",
    "pass",
     {

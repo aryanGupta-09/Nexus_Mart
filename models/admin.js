@@ -14,7 +14,7 @@ const Admin = db.define('Admin', {
             allowNull: false
         },
         phone_number: {
-            type: db.Sequelize.INTEGER,
+            type: db.Sequelize.STRING,
             allowNull: false
         }
     }
@@ -24,13 +24,6 @@ db.sync().then(() => {
     console.log('Admin table created/accessed successfully!');
  }).catch((error) => {
     console.error('Unable to create table Admin: ', error);
- }); 
-
-Admin.create({
-    name: "Admin1",
-    email: "admin1@nm.com",
-    password: "abcd",
-    phone_number: 123457890
-});
+ });
 
 module.exports = Admin;
