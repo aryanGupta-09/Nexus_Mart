@@ -6,6 +6,8 @@ const customersController = require("../controllers/customers_controller");
 
 router.get("/profile/:id", passport.checkCustAuth, customersController.profile);
 
+router.get("/categories/:id", customersController.viewCategory);
+
 router.get("/sign-up", customersController.signUp);
 router.get("/sign-in", customersController.signIn);
 
