@@ -1,6 +1,7 @@
 const Admin = require("../models/admin");
 const Product_Category = require("../models/product_category");
 const Product = require("../models/product");
+const CategoryProductRelation = require("../models/category_product_relation");
 const fs = require("fs");
 const path = require("path");
 
@@ -42,21 +43,19 @@ module.exports.addProductCategory = async function (req, res) {
 module.exports.deleteProductCategory = async function (req, res) {
     let category = await Product_Category.findByPk(req.params.id);
     if (category == null) { console.log("error in finding category"); return; }
+    Product.destroy({where: {ProductCategoryId: req.params.id}});
     category.destroy();
     return res.redirect("/admin/profile");
 }
 
-//Products
-
 module.exports.viewProduct = async function (req, res) {
     let category = await Product_Category.findByPk(req.params.id);
-    let products = await Product.findAll({ order: [["createdAt", "ASC"]] });
+    let products = await Product.findAll({ where: {ProductCategoryId: req.params.id}, order: [["createdAt", "ASC"]] });
     return res.render("admin_view_product", {
         title: "View Product",
         layout: "./admin_layout",
         category: category,
         products: products
-
     });
 }
 
@@ -66,23 +65,22 @@ module.exports.addProduct = async function (req, res) {
     Product.uploadedImage(req, res, async function (err) {
         if (err) { console.log("*****Multer error", err); }
 
-        let product = await Product.findOne({ where: { name: req.body.name } });
+        let product = await Product.findOne({ where: {ProductCategoryId: req.params.id, name: req.body.name } });
         if (!product) {
             const newProduct = await Product.create(req.body);
             if (newProduct == null) { console.log("error in creating new product"); return; }
-
+            newProduct.ProductCategoryId = req.params.id;
             if (req.file) {
                 newProduct.image = Product.imagePath + "/" + req.file.filename;
-                await newProduct.save();
             }
+            await newProduct.save();
         }
-        let products = await Product.findAll({ order: [["createdAt", "ASC"]] });
+        let products = await Product.findAll({ where: {ProductCategoryId: req.params.id}, order: [["createdAt", "ASC"]] });
         return res.render("admin_view_product", {
             title: "View Product",
             layout: "./admin_layout",
             category: category,
             products: products
-
         });
     });
 }
@@ -100,7 +98,7 @@ module.exports.deleteProduct = async function (req, res) {
     console.log(req.params.p_id);
     let category = await Product_Category.findByPk(req.params.id);
     let product = await Product.findByPk(req.params.p_id);
-    if (product == null) { console.log("error in finding product"); return; }
+    if (product == null || product.ProductCategoryId!=req.params.id) { console.log("error in finding product"); return; }
     product.destroy();
     
     return res.redirect(`/admin/admin-view-product/${req.params.id}`);

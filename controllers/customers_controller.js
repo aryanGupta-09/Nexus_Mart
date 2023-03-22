@@ -1,4 +1,5 @@
 const Customer = require("../models/customer");
+const Product_Category = require("../models/product_category");
 
 module.exports.profile = async function(req, res){
     const customer = await Customer.findByPk(req.params.id);
@@ -49,6 +50,15 @@ module.exports.create = async function(req, res){
     }else{
         return res.redirect("back");
     }
+}
+
+module.exports.viewCategory = async function(req, res){
+    const category = await Product_Category.findByPk(req.params.id);
+    if(category==null){console.log("error in rendering category"); return;}
+    return res.render("category", {
+        title: "NexusMart | Category",
+        category: category
+    });
 }
 
 // sign in and create a session for the customer

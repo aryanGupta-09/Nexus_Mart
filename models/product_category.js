@@ -13,10 +13,6 @@ const Product_Category = db.define("Product_Category", {
             type: db.Sequelize.STRING,
             allowNull: true
         },
-        products: {
-            type: db.Sequelize.JSON,
-            allowNull: true
-        },
         image: {
             type: db.Sequelize.STRING,
             allowNull: true
@@ -41,6 +37,6 @@ db.sync().then(() => {
     console.log('Product_Category table created/accessed successfully!');
  }).catch((error) => {
     console.error('Unable to create table Product_Category: ', error);
- }); 
+ });
 
 module.exports = Product_Category;
