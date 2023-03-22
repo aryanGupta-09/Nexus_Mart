@@ -25,20 +25,26 @@
             </tr>
         </thead>
         <tbody>
-            <% var i = 1 %>
-            <% for(cat of categories){ %>
+            <% var i=1 %>
+                <% for(cat of categories){ %>
 
-                <tr>
-                    <th scope="row"><%=i %></th>
-                    <td>
-                        <img src="<%=cat.image%>" alt="" class="imgsize">
-                        <%=cat.name%>
-                    </td>
-                    <td><%=cat.description%></td>
-                    <td><img src="/images/trash-bin-delete.png" alt="" class="cross" style="width: 40px;" ></td>
-                </tr>
-                <%i+=1%>
-                <% } %>
+                    <tr>
+                        <th scope="row">
+                            <%=i %>
+                        </th>
+                        <td>
+                            <a href="/admin/admin-view-product/<%=cat.id%>"><img src="<%=cat.image%>" alt="" class="imgsize">
+                                <%=cat.name%>
+                            </a>
+                        </td>
+                        <td>
+                            <%=cat.description%>
+                        </td>
+                        <td><a href="/admin/delete-product-category/<%=cat.id%>"><img src="/images/trash-bin-delete.png"
+                                    alt="" class="cross" style="width: 40px;"></a></td>
+                    </tr>
+                    <%i+=1%>
+                        <% } %>
         </tbody>
     </table>
 </div>

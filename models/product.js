@@ -1,5 +1,9 @@
 const db = require("../config/sequelize");
 
+const multer = require("multer");
+const path = require("path");
+const IMAGE_PATH = path.join("/uploads/products/images");
+
 const Product = db.define("Product", {
         name: {
             type: db.Sequelize.STRING,
@@ -7,7 +11,7 @@ const Product = db.define("Product", {
         },
         description: {
             type: db.Sequelize.STRING,
-            allowNull: false
+            allowNull: true
         },
         stock: {
             type: db.Sequelize.INTEGER,
@@ -17,20 +21,25 @@ const Product = db.define("Product", {
             type: db.Sequelize.INTEGER,
             allowNull: false
         },
-        discount: {
-            type: db.Sequelize.INTEGER,
-            allowNull: false
-        },
         image: {
-            type: db.Sequelize.BLOB,
-            allowNull: false
-        },
-        products: {
-            type: db.Sequelize.JSON,
-            allowNull: false
+            type: db.Sequelize.STRING,
+            allowNull: true
         }
     }
 );
+
+let storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, path.join(__dirname, "..", IMAGE_PATH));
+    },
+    filename: function (req, file, cb) {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+      cb(null, file.fieldname + '-' + uniqueSuffix);
+    }
+});
+
+Product.uploadedImage = multer({storage: storage}).single("image");
+Product.imagePath = IMAGE_PATH;
 
 db.sync().then(() => {
     console.log('Product table created/accessed successfully!');

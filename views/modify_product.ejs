@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="/css/modify_product.css">
+
+<div class="Header">
+    <a href="/admin/profile" id="homelink"><div class="heading"> Hello Admin </div></a>   
+
+</div>
+
+<div class="addProduct">
+
+    <form action="/admin/add-product/<%= category.id %>" enctype="multipart/form-data" method="post" style="width: 300px; z-index: 0;">
+        <div class="innerBox">
+            <h4 style="margin-bottom: 15px;">Add New Product</h4>
+            <p class="paraClass">Name*</p>
+            <input class="InputButtons" type="text" name="name" placeholder="Add name" required>
+            <p class="paraClass">Description*</p>
+            <input class="InputButtons" type="text" name="description" placeholder="Add description" style="height: 50px;">
+            <p class="paraClass">Stock*</p>
+            <input class="InputButtons" type="text" name="stock" placeholder="Add Stock" required>
+            <p class="paraClass">Total Price*</p>
+            <input class="InputButtons" type="text" name="total_price" placeholder="Add price" >
+            <p class="paraClass">Image*</p>
+            <input type="file" name="image" placeholder="Category Picture" style="margin:0px 0px 10px 90px;">
+            <button type="submit" class="addButton">Add</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,61 @@
+<link rel="stylesheet" type="text/css" href="/css/admin_view_product.css">
+
+<div class="Header">
+    <a href="/admin/profile" id="homelink">
+        <div class="heading"> Hello Admin </div>
+    </a>
+
+</div>
+
+
+<h1>
+    hello <%=category.name %>
+</h1>
+
+<div class="buttonDiv">
+    <a href="/admin/modify-product/<%=category.id%>">
+        <button class="buttonClass">Add Product</button>
+    </a>
+</div>
+
+<table class="table table-hover" style="margin: 20px;">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product</th>
+            <th scope="col">Description</th>
+            <th scope="col">Stock</th>
+            <th scope="col">total_price</th>
+            <th scope="col" style="color: red">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% var i=1 %>
+            <% for(pro of products){ %>
+
+                <tr>
+                    <th scope="row">
+                        <%=i %>
+                    </th>
+                    <td>
+                        <img src="<%=pro.image%>" alt="" class="imgsize">
+                        <%=pro.name%>
+
+                    </td>
+                    <td>
+                        <%=pro.description%>
+                    </td>
+                    <td>
+                        <%=pro.stock%>
+                    </td>
+                    <td>
+                        <%=pro.total_price%>
+                    </td>
+                    <td><a href="/admin/delete-product/<%=category.id%>/<%=pro.id%>"><img
+                                src="/images/trash-bin-delete.png" alt="" class="cross" style="width: 40px;"></a></td>
+                </tr>
+                <%i+=1%>
+                    <% } %>
+    </tbody>
+</table>
+</div>
