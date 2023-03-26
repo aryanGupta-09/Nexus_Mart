@@ -70,6 +70,7 @@ module.exports.addProduct = async function (req, res) {
             const newProduct = await Product.create(req.body);
             if (newProduct == null) { console.log("error in creating new product"); return; }
             newProduct.ProductCategoryId = req.params.id;
+            if(newProduct.stock<0) newProduct.stock=0;
             if (req.file) {
                 newProduct.image = Product.imagePath + "/" + req.file.filename;
             }
