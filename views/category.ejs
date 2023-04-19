@@ -1,37 +1,70 @@
-<table class="table table-hover" style="margin: 20px;">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Product</th>
-            <th scope="col">Description</th>
-            <th scope="col">Stock</th>
-            <th scope="col">total_price</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% var i=1 %>
-            <% for(pro of products){ %>
+<div style="padding:20px;">
 
-                <tr>
-                    <th scope="row">
-                        <%=i %>
-                    </th>
-                    <td>
-                        <img src="<%=pro.image%>" alt="" class="imgsize">
-                        <%=pro.name%>
+    <table class="table table-hover table-bordered text-center" style="">
+        <thead class="thead-dark ">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product</th>
+                <th scope="col">Description</th>
+                <th scope="col">Stock</th>
+                <th scope="col">total_price</th>
+                <th scope="col">Add</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% var i=1 %>
+                <% for(pro of products){ %>
 
-                    </td>
-                    <td>
-                        <%=pro.description%>
-                    </td>
-                    <td>
-                        <%=pro.stock%>
-                    </td>
-                    <td>
-                        <%=pro.total_price%>
-                    </td>
-                </tr>
-                <%i+=1%>
-                    <% } %>
-    </tbody>
-</table>
+                    <tr>
+                        <th scope="row">
+                            <%=i %>
+                        </th>
+                        <td>
+                            <img src="<%=pro.image%>" alt="" class="imgsize">
+                            <%=pro.name%>
+
+                        </td>
+                        <td>
+                            <%=pro.description%>
+                        </td>
+                        <td>
+                            <%=pro.stock%>
+                        </td>
+                        <td>
+                            <%=pro.total_price%>
+                        </td>
+                        <td>
+
+                            <button class="text-center" onClick="removefromcart('<%=i%>')" style="border-radius: 50%; padding: 0px 7px 0px 7px;">-</button>
+                            <button id="<%=i%>"   style="border-radius: 5px; padding: 0px 15px 0px 15px;">0</button>
+                            <button class="text-center" onClick="addtocart('<%=i%>')" style="border-radius: 50%; padding: 0px 7px 0px 7px;">+</button>
+                        </td>
+                    </tr>
+                    <%i+=1%>
+                        <% } %>
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+var clicks = 0;
+
+function removefromcart(id) {
+
+    if(Number(document.getElementById(id).innerHTML)<1){
+        return 0;
+    }
+
+  document.getElementById(id).innerHTML -= 1;
+};
+function addtocart(id) {
+  clicks += 1;
+  document.getElementById(id).innerHTML = Number(document.getElementById(id).innerHTML) + 1;
+};
+</script>
+<!-- <div class="d-flex justify-content-around flex-wrap">
+
+
+
+</div> -->
