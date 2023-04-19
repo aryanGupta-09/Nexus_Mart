@@ -68,9 +68,10 @@ module.exports.create = async function(req, res){
 module.exports.viewCategory = async function(req, res){
     const category = await Product_Category.findByPk(req.params.id);
     if(category==null){console.log("error in rendering category"); return;}
+    const products = await Product.findAll({where: {ProductCategoryId: category.id}});
     return res.render("category", {
         title: "NexusMart | Category",
-        category: category
+        products: products
     });
 }
 
