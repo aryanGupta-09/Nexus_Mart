@@ -1,5 +1,7 @@
 const Customer = require("../models/customer");
 const Product_Category = require("../models/product_category");
+const Product = require("../models/product");
+const ShoppingCartRelation = require("../models/shopping_cart_relation");
 
 module.exports.profile = async function(req, res){
     const customer = await Customer.findByPk(req.params.id);
@@ -12,6 +14,17 @@ module.exports.profile = async function(req, res){
             customer: customer
         });
     }
+}
+
+module.exports.shoppingCart = async function(req, res){
+    const customer = await Customer.findByPk(req.params.id);
+    let products = await Product.findAll({ where: {CustomerId: req.params.id}, order: [["createdAt", "ASC"]] });
+
+    return res.render("shopping_cart", {
+        title: "NexusMart | Shopping Cart",
+        products: products,
+        customer: customer
+    });
 }
 
 // render the sign up page

@@ -91,11 +91,17 @@ body {
             margin-left: 0px;
             align-items: center;
             justify-content: center;
-
+            
             width: 50px;
             margin: 0%;
             margin-right: 10px;
             background-color: aliceblue;
+            &:hover {
+                text-decoration: none;
+            }
+            .imgsize{
+                width: 30px;
+            }
         }
 
         .profile_image {

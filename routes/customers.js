@@ -11,6 +11,8 @@ router.get("/categories/:id", customersController.viewCategory);
 router.get("/sign-up", customersController.signUp);
 router.get("/sign-in", customersController.signIn);
 
+router.get("/shopping-cart/:id", passport.checkCustAuth, customersController.shoppingCart);
+
 router.post("/create", customersController.create);
 
 // use passport as a middleware to authenticate

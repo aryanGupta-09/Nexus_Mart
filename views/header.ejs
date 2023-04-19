@@ -6,7 +6,7 @@
             <h3 style="color:antiquewhite">NexusMart</h3>
         </div>
     </a>
-    
+
 
     <div class="searchSection" style="margin-right:0px;">
         <input class="SearchBar" type="text" placeholder="Search">
@@ -15,20 +15,26 @@
 
 
     <div class="rightSection">
+        <% if(locals.user){ %>
+        <a href="/customers/shopping-cart/<%= user.id %>" class="shoppingcart">
+            <img src="/images/cart.svg" alt="" class="imgsize">
+        </a>
+        <% }else{ %>
+            <a href="/customers/sign-in" class="shoppingcart">
+                <img src="/images/cart.svg" alt="" class="imgsize">
+            </a>
+            <% } %>
 
-        <div class="shoppingcart">
-            scart
-        </div>
         <div class="profile_image">
             <% if(locals.user){ %>
                 <a href="/customers/profile/<%= user.id %>">
-                    <img src="/images/blank-profile-picture-973460_1280.webp"  class="pfp">
+                    <img src="/images/blank-profile-picture-973460_1280.webp" class="pfp">
                 </a>
-            <% }else{ %>
-                <a href="/customers/sign-in">
-                    <img src="/images/blank-profile-picture-973460_1280.webp"  class="pfp">
-                </a>
-            <% } %>
+                <% }else{ %>
+                    <a href="/customers/sign-in">
+                        <img src="/images/blank-profile-picture-973460_1280.webp" class="pfp">
+                    </a>
+                    <% } %>
         </div>
     </div>
 

@@ -1,0 +1,48 @@
+<link rel="stylesheet" type="text/css" href="/css/shopping_cart.css">
+<h1 style="margin-left: 10px;">Shopping Cart</h1>
+<div class="main-outer-flex">
+
+    <div style="width: 700px">
+
+        <table class="table table-hover table-class">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col" style="color: red">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% var i=1 %>
+                    <% for(pro of products){ %>
+                        <tr>
+                            <th scope="row">
+                                <%=i %>
+                            </th>
+                            <td>
+                                <%=pro.name%>
+                            </td>
+                            <td>
+                                <%=pro.stock%>
+                            </td>
+                            <td>
+                                <%=pro.total_price%>
+                            </td>
+                            <td>
+                                delete
+                            </td>
+                        </tr>
+                        <%i+=1%>
+                            <% } %>
+
+            </tbody>
+        </table>
+    </div>
+    <div>
+        Summary
+    </div>
+
+
+</div>

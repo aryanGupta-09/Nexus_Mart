@@ -67,6 +67,10 @@ body {
       margin: 0%;
       margin-right: 10px;
       background-color: aliceblue; }
+      body .rightSection .shoppingcart:hover {
+        text-decoration: none; }
+      body .rightSection .shoppingcart .imgsize {
+        width: 30px; }
     body .rightSection .profile_image {
       height: 100%;
       display: flex;
