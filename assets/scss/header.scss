@@ -14,7 +14,6 @@ body {
         bottom: 50;
         left: 0;
         right: 0;
-        background-color: rgb(49, 49, 116);
     }
 
     #homeLink {
@@ -57,6 +56,9 @@ body {
         font-size: 15px;
     }
 
+    .magnImage{
+        width: 22px;
+    }
     .SearchButton {
         border: none;
         height: 29px;
@@ -81,7 +83,7 @@ body {
 
     .rightSection {
         margin-left: 5px;
-        background-color: rgba(1, 106, 198, 0.427);
+        // background-color: rgba(1, 106, 198, 0.427);
         display: flex;
         align-items: center;
 
@@ -95,7 +97,7 @@ body {
             width: 50px;
             margin: 0%;
             margin-right: 10px;
-            background-color: aliceblue;
+            // background-color: aliceblue;
             &:hover {
                 text-decoration: none;
             }
@@ -115,7 +117,7 @@ body {
             width: 50px;
             margin-right: 10px;
             padding: 0;
-            background-color: black;
+            // background-color: black;
             color: aliceblue;
 
             .pfp {

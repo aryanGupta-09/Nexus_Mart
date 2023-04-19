@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0a5e5e;
+  background-color: #343A40;
   margin-bottom: 10px; }
   .Header .heading {
     color: beige;
@@ -12,7 +12,7 @@
     margin-right: 10px;
     width: 90px;
     background-color: beige;
-    color: #0a5e5e;
+    color: #343A40;
     border: 2px;
     transition: opacity 0.15s, box-shadow 0.25s; }
     .Header .buttonClass:hover {

@@ -1,35 +1,37 @@
-body .outerBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  body .outerBox .signupBox {
-    padding: 10px;
+body {
+  background-color: #EEFBFF; }
+  body .outerBox {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 250px;
-    height: 305px;
-    background-color: #0a5e5e;
-    color: black;
-    border-radius: 5px; }
-    body .outerBox .signupBox .inputBox {
-      background-color: white;
-      margin-bottom: 15px;
-      width: 200px; }
-    body .outerBox .signupBox .Sign_up {
-      background-color: beige;
-      margin-bottom: 10px;
-      width: 200px;
+    align-items: center; }
+    body .outerBox .signupBox {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 250px;
+      height: 305px;
+      background-color: #343A40;
+      color: black;
+      border-radius: 5px; }
+      body .outerBox .signupBox .inputBox {
+        background-color: white;
+        margin-bottom: 15px;
+        width: 200px; }
+      body .outerBox .signupBox .Sign_up {
+        background-color: beige;
+        margin-bottom: 10px;
+        width: 200px;
+        font-size: 15px;
+        padding: 2.5px; }
+        body .outerBox .signupBox .Sign_up:hover {
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+          cursor: pointer; }
+    body .outerBox .Sign_in {
       font-size: 15px;
-      padding: 2.5px; }
-      body .outerBox .signupBox .Sign_up:hover {
+      padding: 2.5px;
+      width: 200px;
+      background-color: beige; }
+      body .outerBox .Sign_in:hover {
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
         cursor: pointer; }
-  body .outerBox .Sign_in {
-    font-size: 15px;
-    padding: 2.5px;
-    width: 200px;
-    background-color: beige; }
-    body .outerBox .Sign_in:hover {
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-      cursor: pointer; }

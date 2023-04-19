@@ -1,35 +1,35 @@
-.Header {
+body .Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: #0a5e5e;
+  background-color: #343A40;
   margin-bottom: 10px; }
-  .Header #homelink .heading {
+  body .Header #homelink .heading {
     color: beige;
     font-size: 35px;
     margin-left: 10px; }
-  .Header #homelink:hover {
+  body .Header #homelink:hover {
     text-decoration: none; }
 
-.imgsize {
+body .imgsize {
   width: 100px; }
 
-.buttonDiv {
+body .buttonDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .buttonDiv .buttonClass {
+  body .buttonDiv .buttonClass {
     border-radius: 5px;
     margin-bottom: 10px;
     width: 150px;
-    background-color: #0a5e5e;
+    background-color: #343A40;
     color: beige;
     border: 2px;
     transition: opacity 0.15s, box-shadow 0.25s; }
-    .buttonDiv .buttonClass:hover {
+    body .buttonDiv .buttonClass:hover {
       opacity: 0.8;
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); }
-    .buttonDiv .buttonClass:active {
+    body .buttonDiv .buttonClass:active {
       opacity: 0.5; }

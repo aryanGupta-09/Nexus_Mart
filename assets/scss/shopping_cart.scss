@@ -1,7 +1,10 @@
-.main-outer-flex{
-    margin: 0px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-
+body{
+    background-color: #EEFBFF;  
+    .main-outer-flex{
+        margin: 0px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    
+    }
 }

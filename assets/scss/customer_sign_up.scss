@@ -1,4 +1,6 @@
 body {
+    background-color: #EEFBFF;
+
     .outerBox {
         display: flex;
         flex-direction: column;
@@ -11,7 +13,7 @@ body {
             align-items: center;
             width: 250px;
             height: 305px;
-            background-color: rgb(10, 94, 94);
+            background-color: #343A40;
             color: black;
             border-radius: 5px;
 
@@ -20,24 +22,28 @@ body {
                 margin-bottom: 15px;
                 width: 200px;
             }
-            .Sign_up{
+
+            .Sign_up {
                 background-color: beige;
-                margin-bottom: 10px; 
-                width: 200px; 
-                font-size: 15px; 
+                margin-bottom: 10px;
+                width: 200px;
+                font-size: 15px;
                 padding: 2.5px;
-                &:hover{
+
+                &:hover {
                     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
                     cursor: pointer;
                 }
             }
         }
-        .Sign_in{
+
+        .Sign_in {
             font-size: 15px;
             padding: 2.5px;
             width: 200px;
             background-color: beige;
-            &:hover{
+
+            &:hover {
                 box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
                 cursor: pointer;
             }

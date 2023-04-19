@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/css/header.css">
 
-<div id="header">
+<div id="header" class="bg-dark">
     <a href="/" id="homeLink">
         <div id="NexusMartLogo">
             <h3 style="color:antiquewhite">NexusMart</h3>
@@ -10,18 +10,18 @@
 
     <div class="searchSection" style="margin-right:0px;">
         <input class="SearchBar" type="text" placeholder="Search">
-        <button class="SearchButton"><img class="magnImage" src="images/search.svg"></button>
+        <button class="SearchButton"><img class="magnImage" src="/images/search.svg"></button>
     </div>
 
 
     <div class="rightSection">
         <% if(locals.user){ %>
         <a href="/customers/shopping-cart/<%= user.id %>" class="shoppingcart">
-            <img src="/images/cart.svg" alt="" class="imgsize">
+            <img src="/images/scart.png" alt="" class="imgsize">
         </a>
         <% }else{ %>
             <a href="/customers/sign-in" class="shoppingcart">
-                <img src="/images/cart.svg" alt="" class="imgsize">
+                <img src="/images/cart.png" style="" alt="" class="imgsize">
             </a>
             <% } %>
 

@@ -1,51 +1,54 @@
-.Header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    background-color: rgb(10, 94, 94);
-    margin-bottom: 10px;
-
-    #homelink{
-        .heading {
-            color: beige;
-            font-size: 35px;
-            margin-left: 10px;
-        }
-        &:hover {
-            text-decoration: none;
-        }
-        
-    }
-}
-.imgsize{
-    width: 100px;
-}
-.buttonDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .buttonClass {
-        border-radius: 5px;
+body{
+    
+    .Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        background-color: #343A40;
         margin-bottom: 10px;
-        width: 150px;
-        background-color: rgb(10, 94, 94);
-        color: beige;
-        border: 2px;
-        transition: opacity 0.15s,
-            box-shadow 0.25s;
-
-        &:hover {
-            opacity: 0.8;
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-        }
-
-        &:active {
-            opacity: 0.5;
+    
+        #homelink{
+            .heading {
+                color: beige;
+                font-size: 35px;
+                margin-left: 10px;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+            
         }
     }
-
-
+    .imgsize{
+        width: 100px;
+    }
+    .buttonDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .buttonClass {
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 150px;
+            background-color: #343A40;
+            color: beige;
+            border: 2px;
+            transition: opacity 0.15s,
+                box-shadow 0.25s;
+    
+            &:hover {
+                opacity: 0.8;
+                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+            }
+    
+            &:active {
+                opacity: 0.5;
+            }
+        }
+    
+    
+    }
 }

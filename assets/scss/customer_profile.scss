@@ -1,112 +1,116 @@
-.outerDiv {
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    margin-top: 20px;
+body {
+    background-color: #EEFBFF;
 
-    .maindiv {
+    .outerDiv {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-right: 20px;
+        align-items: top;
+        justify-content: center;
+        margin-top: 20px;
 
-        .boxInBody {
+        .maindiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
+
+            .boxInBody {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+                width: 200px;
+                height: 70px;
+                background-color: #343A40;
+                border-radius: 20px;
+                color: antiquewhite;
+
+                &:hover {
+
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+                    cursor: pointer;
+                }
+            }
+
+
+        }
+
+        .ProfileImageBox {
             display: flex;
             align-items: center;
-            justify-content: center;
+            padding: 10px;
+            /* justify-content: center; */
             margin-bottom: 10px;
-            width: 200px;
+
+            width: 400px;
             height: 70px;
-            background-color: rgb(10, 94, 94);
+
+            background-color: #343A40;
             border-radius: 20px;
             color: antiquewhite;
 
-            &:hover {
-
-                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-                cursor: pointer;
+            .pfpm {
+                height: 40px;
+                margin-right: 10px;
+                border-radius: 40px;
+                margin-left: 10px
             }
+
+            .Update_button {
+                background-color: antiquewhite;
+                color: #343A40;
+
+                border-radius: 10px;
+                border-width: 1px;
+
+                &:hover {
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+
+                }
+            }
+        }
+
+
+        .ProfileDescBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 18px;
+            padding-top: 12px;
+            margin-bottom: 10px;
+            width: 400px;
+            height: 400px;
+            background-color: #343A40;
+            border-radius: 20px;
+            color: antiquewhite;
+
+            .Infoheaders {
+                font-size: 12px;
+
+                .InputButtons {
+                    flex: 1;
+                    width: 300px;
+                    margin-bottom: 3px;
+
+                }
+            }
+
+            .Update_button {
+                background-color: antiquewhite;
+                color: #343A40;
+
+                border-radius: 10px;
+                border-width: 1px;
+
+                &:hover {
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+
+                }
+            }
+
         }
 
 
     }
-
-    .ProfileImageBox {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        /* justify-content: center; */
-        margin-bottom: 10px;
-
-        width: 400px;
-        height: 70px;
-
-        background-color: rgb(10, 94, 94);
-        border-radius: 20px;
-        color: antiquewhite;
-
-        .pfpm {
-            height: 40px;
-            margin-right: 10px;
-            border-radius: 40px;
-            margin-left: 10px
-        }
-
-        .Update_button {
-            background-color: antiquewhite;
-            color: rgb(10, 94, 94);
-
-            border-radius: 10px;
-            border-width: 1px;
-
-            &:hover {
-                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-
-            }
-        }
-    }
-
-
-    .ProfileDescBox {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 18px;
-        padding-top: 12px;
-        margin-bottom: 10px;
-        width: 400px;
-        height: 400px;
-        background-color: rgb(10, 94, 94);
-        border-radius: 20px;
-        color: antiquewhite;
-
-        .Infoheaders {
-            font-size: 12px;
-
-            .InputButtons {
-                flex: 1;
-                width: 300px;
-                margin-bottom: 3px;
-
-            }
-        }
-
-        .Update_button {
-            background-color: antiquewhite;
-            color: rgb(10, 94, 94);
-
-            border-radius: 10px;
-            border-width: 1px;
-
-            &:hover {
-                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-
-            }
-        }
-
-    }
-
-
 }

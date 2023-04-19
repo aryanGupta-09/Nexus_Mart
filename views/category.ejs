@@ -20,7 +20,7 @@
                             <%=i %>
                         </th>
                         <td>
-                            <img src="<%=pro.image%>" alt="" class="imgsize">
+                            <img src="<%=pro.image%>" alt="" class="imgsize" style="width: 100px;">
                             <%=pro.name%>
 
                         </td>
@@ -35,9 +35,12 @@
                         </td>
                         <td>
 
-                            <button class="text-center" onClick="removefromcart('<%=i%>')" style="border-radius: 50%; padding: 0px 7px 0px 7px;">-</button>
-                            <button id="<%=i%>"   style="border-radius: 5px; padding: 0px 15px 0px 15px;">0</button>
-                            <button class="text-center" onClick="addtocart('<%=i%>')" style="border-radius: 50%; padding: 0px 7px 0px 7px;">+</button>
+                            <div class="btn-group" >
+
+                                <button class="text-center" onClick="removefromcart('<%=i%>')" style=" padding: 0px 7px 0px 7px; color:antiquewhite; background-color: #343A40; border-right: 0px;">-</button>
+                                <button id="<%=i%>"   style=" padding: 0px 15px 0px 15px; border:none">0</button>
+                                <button class="text-center" onClick="addtocart('<%=i%>')" style=" padding: 0px 7px 0px 7px; color:antiquewhite; background-color: #343A40;  border-left: 0px;">+</button>
+                            </div>
                         </td>
                     </tr>
                     <%i+=1%>

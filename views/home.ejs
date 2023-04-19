@@ -3,9 +3,9 @@
 <div class="d-flex justify-content-around flex-wrap">
   <% for(cat of categories){ %>
     <a href="/customers/categories/<%=cat.id%>" class="text-decoration-none text-dark">
-      <div class="card">
+      <div class="card col-gap-3" style="margin-bottom: 5%;">
         <img src="<%= cat.image %>" class="card-img-top cat-img">
-        <h5 class="card-title text-center"><%= cat.name %></h5>
+        <h5 class="card-title text-center" style="font-size: 17px;"><%= cat.name %></h5>
       </div>
     </a>
   <% } %>
