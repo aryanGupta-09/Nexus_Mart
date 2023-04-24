@@ -2,8 +2,10 @@ const Customer = require("../models/customer");
 const Product_Category = require("../models/product_category");
 const Product = require("../models/product");
 const CartItem = require("../models/cart_item");
+const OrderItem = require("../models/order_item");
 const ShoppingCartRelation = require("../models/shopping_cart_relation");
 const Order = require("../models/order");
+const db = require("../config/sequelize");
 
 module.exports.profile = async function (req, res) {
     const customer = await Customer.findByPk(req.params.id);
@@ -131,9 +133,43 @@ module.exports.clearCart = async function (req, res) {
 }
 
 module.exports.checkoutCart = async function (req, res) {
+    const TODAY = new Date();
+    const cartItems = await CartItem.findAll({ where: { CustomerId: req.params.id } });
+    if (cartItems == null) { console.log("error in finding cart items while clearing cart"); return; }
+
+    if (cartItems.length == 0) { return res.redirect("back"); }
+
+    const order = await Order.create({
+        placed_date: "27-01-12",
+        arrival_date: "27-01-12",
+        total_amount: 0,
+        CustomerId: req.params.id,
+        num_items: cartItems.length
+    })
+
+    for (let i = 0; i < cartItems.length; i++) {
+        const orderItem = await OrderItem.create({
+            ProductId: cartItems[i].ProductId,
+            quantity: cartItems[i].quantity
+        });
+        const product = await Product.findByPk(orderItem.ProductId);
+        order.total_amount += product.total_price*orderItem.quantity;
+        product.stock -= orderItem.quantity; 
+        product.save();
+        cartItems[i].destroy();
+    }
+    order.save();
     return res.redirect("back");
+
 }
 
+module.exports.viewOrders = async function (req, res) {
+    let orders = await Order.findAll({ where: { CustomerId: req.params.id }, order: [["createdAt", "ASC"]] });
+    return res.render("orders", {
+        title: "NexusMart | Orders",
+        orders : orders
+    });
+}
 
 // sign in and create a session for the customer
 module.exports.createSession = function (req, res) {

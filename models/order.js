@@ -1,6 +1,7 @@
 const db = require("../config/sequelize");
 
-const CartItem = require("./cart_item");
+const OrderItem = require("./order_item");
+const Customer = require("./customer");
 
 const Order = db.define('Order', {
     placed_date: {
@@ -11,12 +12,8 @@ const Order = db.define('Order', {
         type: db.Sequelize.STRING,
         allowNull: false
     },
-    cust_name: {
-        type: db.Sequelize.STRING,
-        allowNull: false
-    },
-    cust_address: {
-        type: db.Sequelize.STRING,
+    num_items:{
+        type: db.Sequelize.INTEGER,
         allowNull: false
     },
     total_amount: {
@@ -26,8 +23,11 @@ const Order = db.define('Order', {
 }
 );
 
-Order.hasMany(CartItem);
-CartItem.belongsTo(Order);
+Order.hasMany(OrderItem);
+OrderItem.belongsTo(Order);
+
+Customer.hasMany(Order);
+Order.belongsTo(Customer);
 
 db.sync().then(() => {
     console.log('Order table created/accessed successfully!');

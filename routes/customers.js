@@ -17,6 +17,7 @@ router.get("/remove-product/:c_id/", passport.checkCustAuth, customersController
 router.get("/clear-cart/:id/", passport.checkCustAuth, customersController.clearCart);
 router.get("/checkout-cart/:id/", passport.checkCustAuth, customersController.checkoutCart);
 
+router.get("/orders/:id", passport.checkCustAuth, customersController.viewOrders);
 router.post("/create", customersController.create);
 
 // use passport as a middleware to authenticate

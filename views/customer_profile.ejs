@@ -3,7 +3,9 @@
 <div class="outerDiv">
     <div class="maindiv">
         <div class="boxInBody">Account Settings</div>
-        <div class="boxInBody">Your Orders</div>
+        <a href="/customers/orders/<%=customer.id%>">
+            <div class="boxInBody">Your Orders</div>
+        </a>
         <div class="boxInBody">Membership Plan</div>
         <div class="boxInBody">Password & Security</div>
         <a href="/customers/sign-out"><button style="background-color: #343A40;

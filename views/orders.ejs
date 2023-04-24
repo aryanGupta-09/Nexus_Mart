@@ -1,0 +1,39 @@
+<h1 style="margin-left: 5%;">Orders</h1>
+<div class="d-flex flex-column justify-content-center align-items-center flex-wrap"
+    style="width: 100%; margin-top:25px;">
+    <table class=" table table-hover table-class table-bordered text-center" style="width: 1000px">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Number of Items</th>
+                <th scope="col">Total Amount</th>
+                <th scope="col">Order Placed date</th>
+                <th scope="col">Expected Arrival</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0; i<orders.length; i++){ %>
+                <tr>
+                    <th scope="row">
+                        <%=i+1 %>
+                    </th>
+                    <td>
+                        <%=orders[i].num_items%>
+                    </td>
+                    <td>
+                        <%=orders[i].total_amount%>
+                    </td>
+                    <td>
+                        <%=orders[i].placed_date %>
+                    </td>
+                    <td>
+                        <%=orders[i].arrival_date %>
+                    </td>
+                </tr>
+                <% } %>
+
+        </tbody>
+    </table>
+
+</div>
