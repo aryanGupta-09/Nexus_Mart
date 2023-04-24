@@ -1,13 +1,13 @@
 <div style="padding:20px;">
 
-    <table class="table table-hover table-bordered text-center" style="">
+    <table class="table table-hover table-bordered text-center">
         <thead class="thead-dark ">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Product</th>
                 <th scope="col">Description</th>
                 <th scope="col">Stock</th>
-                <th scope="col">total_price</th>
+                <th scope="col">Price</th>
                 <th scope="col">Add</th>
             </tr>
         </thead>
@@ -20,7 +20,7 @@
                             <%=i %>
                         </th>
                         <td>
-                            <img src="<%=pro.image%>" alt="" class="imgsize" style="width: 100px;">
+                            <img src="<%=pro.image%>" alt="" class="imgsize">
                             <%=pro.name%>
 
                         </td>
@@ -34,13 +34,34 @@
                             <%=pro.total_price%>
                         </td>
                         <td>
-
-                            <div class="btn-group" >
-
-                                <button class="text-center" onClick="removefromcart('<%=i%>')" style=" padding: 0px 7px 0px 7px; color:antiquewhite; background-color: #343A40; border-right: 0px;">-</button>
-                                <button id="<%=i%>"   style=" padding: 0px 15px 0px 15px; border:none">0</button>
-                                <button class="text-center" onClick="addtocart('<%=i%>')" style=" padding: 0px 7px 0px 7px; color:antiquewhite; background-color: #343A40;  border-left: 0px;">+</button>
-                            </div>
+                            <% if(locals.user){ %>
+                                <a href="/customers/update-cart/<%= customer.id %>/<%=pro.id%>/minus/<%=pro.stock%>"
+                                    class="btn text-center"
+                                    style=" padding: 0px 7px 0px 7px; color:antiquewhite; background-color: #343A40; border-right: 0px;">-</a>
+                                <button id="<%=i%>" style=" padding: 0px 15px 0px 15px; border:none">
+                                    <% let flag = false %>
+                                    <% for(item of cartItems){ %>
+                                        <% if(pro.id==item.ProductId ) { %>
+                                            <% flag = true %>
+                                            <% break; %>
+                                        <% } %>
+                                    <% } %>
+                                    <% if(flag){ %>
+                                        <%=item.quantity%>
+                                    <% }else{ %>
+                                        0
+                                    <% } %>
+                                </button>
+                                <a href="/customers/update-cart/<%= customer.id %>/<%=pro.id%>/plus/<%=pro.stock%>"
+                                    class="btn text-center"
+                                    style=" padding: 0px 7px 0px 7px; color:antiquewhite; background-color: #343A40;  border-left: 0px;">+</a>
+                                <% }else{ %>
+                                    <button class="text-center" onClick="removefromcart('<%=i%>')"
+                                        style=" padding: 0px 7px 0px 7px; color:antiquewhite; background-color: #343A40; border-right: 0px;">-</a>
+                                        <button id="<%=i%>" style=" padding: 0px 15px 0px 15px; border:none">0</button>
+                                        <button class=" text-center" onClick="addtocart('<%=i%>', '<%=pro.stock%>')"
+                                            style=" padding: 0px 7px 0px 7px; color:antiquewhite; background-color: #343A40;  border-left: 0px;">+</a>
+                                            <% } %>
                         </td>
                     </tr>
                     <%i+=1%>
@@ -50,24 +71,20 @@
 </div>
 
 <script>
+    function removefromcart(id) {
+        if (Number(document.getElementById(id).innerHTML) < 1) {
+            return;
+        }
+        document.getElementById(id).innerHTML -= 1;
+    };
+    function addtocart(id, stock) {
+        const curr = Number(document.getElementById(id).innerHTML);
+        if (curr >= stock) {
+            return;
+        }
+        if (curr == 0) {
 
-var clicks = 0;
-
-function removefromcart(id) {
-
-    if(Number(document.getElementById(id).innerHTML)<1){
-        return 0;
-    }
-
-  document.getElementById(id).innerHTML -= 1;
-};
-function addtocart(id) {
-  clicks += 1;
-  document.getElementById(id).innerHTML = Number(document.getElementById(id).innerHTML) + 1;
-};
+        }
+        document.getElementById(id).innerHTML = curr + 1;
+    };
 </script>
-<!-- <div class="d-flex justify-content-around flex-wrap">
-
-
-
-</div> -->

@@ -1,10 +1,10 @@
 const db = require("../config/sequelize");
 
 const Customer = require('./customer');
-const Product = require('./product');
+const CartItem = require('./cart_item');
 
-Customer.hasMany(Product);
-Product.belongsTo(Customer);
+Customer.hasMany(CartItem);
+CartItem.belongsTo(Customer);
 
 db.sync().then(() => {
     console.log('Shopping-cart relation created!');

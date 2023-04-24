@@ -1,48 +1,54 @@
-<link rel="stylesheet" type="text/css" href="/css/shopping_cart.css">
-<h1 style="margin-left: 10px;">Shopping Cart</h1>
-<div class="main-outer-flex">
-
-    <div style="width: 700px">
-
-        <table class="table table-hover table-class">
-            <thead>
+<h1 style="margin-left: 5%;">Shopping Cart</h1>
+<div class="d-flex flex-column justify-content-center align-items-center flex-wrap"
+    style="width: 100%; margin-top:25px;">
+    <table class=" table table-hover table-class table-bordered text-center" style="width: 1000px">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total Price</th>
+                <th scope="col" style="color: red">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0; i<cartItems.length; i++){ %>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Item</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Price</th>
-                    <th scope="col" style="color: red">Delete</th>
+                    <th scope="row">
+                        <%=i+1 %>
+                    </th>
+                    <td>
+                        <img src="<%=products[i].image%>" alt="" style="width:20px;">
+                        <%=products[i].name%>
+                    </td>
+                    <td>
+                        <%=cartItems[i].quantity%>
+                    </td>
+                    <td>
+                        <%=products[i].total_price %>
+                    </td>
+                    <td>
+                        <%=(products[i].total_price)*cartItems[i].quantity %>
+                    </td>
+                    <td>
+                        <a href="/customers/remove-product/<%=cartItems[i].id%>" style="text-decoration: none;">
+                            <img src="/images/trash-bin-delete.png" alt="" class="cross" style="width: 40px;">
+                        </a>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                <% var i=1 %>
-                    <% for(pro of products){ %>
-                        <tr>
-                            <th scope="row">
-                                <%=i %>
-                            </th>
-                            <td>
-                                <%=pro.name%>
-                            </td>
-                            <td>
-                                <%=pro.stock%>
-                            </td>
-                            <td>
-                                <%=pro.total_price%>
-                            </td>
-                            <td>
-                                delete
-                            </td>
-                        </tr>
-                        <%i+=1%>
-                            <% } %>
+                <% } %>
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-between" style="width:50%">
+
+        <a href="/customers/checkout-cart/<%=customer.id%>">
+            <button class="btn btn-outline-dark">Checkout Cart</button>
+        </a>
+        <a href="/customers/clear-cart/<%=customer.id%>">
+            <button class="btn btn-outline-danger">Clear Cart</button>
+        </a>
     </div>
-    <div>
-        Summary
-    </div>
-
-
 </div>
