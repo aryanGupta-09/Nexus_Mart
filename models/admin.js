@@ -20,6 +20,23 @@ const Admin = db.define('Admin', {
     }
 );
 
+Admin.findOrCreate({
+    where: {
+        name: 'admin1',
+        email: 'admin1@nm.com',
+        password: 'admin1',
+        phone_number: '1234567890'
+    }
+}).then(([admin, created]) => {
+    if (created) {
+        console.log('admin1 created successfully!');
+    } else {
+        console.log('admin1 already exists');
+    }
+}).catch((error) => {
+    console.error('Unable to create admin1: ', error);
+});
+
 db.sync().then(() => {
     console.log('Admin table created/accessed successfully!');
  }).catch((error) => {
