@@ -40,9 +40,9 @@ The admins can add/delete/modify product categories and products, and the users 
 
 ## Screenshots
 
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/f2a60060-0aa2-4897-a49a-e52f9089b9b5" alt="Home_screen" width="450" height="550" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/292e8933-e2cb-43ec-aab3-444049f9bdb1" alt="Customer_sign_up" width="450" height="550" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/67dafba9-ab8d-433a-ad37-4316b548cec0" alt="Customer_profile" width="1000" height="600" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/6b1f13f8-3ece-40a4-b8d7-5bb75655f24e" alt="Customer_cart" width="1000" height="600" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/6ad8347d-7d80-4081-9cec-0d0450132a66" alt="Admin_add_category" width="1000" height="600" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/bf0f93c7-3846-4f21-ad03-9fadaabbdc27" alt="Admin_add_product" width="1000" height="600" />
+<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/f2a60060-0aa2-4897-a49a-e52f9089b9b5" alt="Home_screen" width="400" height="550" />
+<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/292e8933-e2cb-43ec-aab3-444049f9bdb1" alt="Customer_sign_up" width="400" height="550" />
+<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/67dafba9-ab8d-433a-ad37-4316b548cec0" alt="Customer_profile" width="1000" height="500" />
+<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/6b1f13f8-3ece-40a4-b8d7-5bb75655f24e" alt="Customer_cart" width="1000" height="500" />
+<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/6ad8347d-7d80-4081-9cec-0d0450132a66" alt="Admin_add_category" width="1000" height="500" />
+<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/96881807/bf0f93c7-3846-4f21-ad03-9fadaabbdc27" alt="Admin_add_product" width="1000" height="500" />
