@@ -5,14 +5,14 @@ The admins can add/delete/modify product categories and products, and the users 
 
 ## Tech Stack
 
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/842913cc-3046-42c4-931d-697f5c037c7b" alt="Home_screen" width="55" height="55" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/9ebbfb7d-088d-4195-ad51-1990bf6b03db" alt="Home_screen" width="55" height="55" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/a44069ab-9830-4542-95e1-8eeb4210b176" alt="Home_screen" width="55" height="55" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/3fac2735-2ba2-41d8-9ae6-c0a306871500" alt="Home_screen" width="55" height="55" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/34e25406-555d-48f4-b93f-f92e6c6807e5" alt="Home_screen" width="55" height="55" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/bfbc5afd-09e7-43c1-b237-0cf7ecf86074" alt="Home_screen" width="55" height="55" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/95a49a2d-ac1c-4530-b75a-a34559b04ca5" alt="Home_screen" width="55" height="55" />
-<img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/f42dab55-46e4-4b08-ab45-9ac245d03eb3" alt="Home_screen" width="55" height="55" />
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/842913cc-3046-42c4-931d-697f5c037c7b" alt="Home_screen" width="55" height="55" /></a>
+<a href="https://www.w3.org/TR/CSS/#css"><img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/9ebbfb7d-088d-4195-ad51-1990bf6b03db" alt="Home_screen" width="55" height="55" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/a44069ab-9830-4542-95e1-8eeb4210b176" alt="Home_screen" width="55" height="55" /></a>
+<a href="https://getbootstrap.com/"><img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/3fac2735-2ba2-41d8-9ae6-c0a306871500" alt="Home_screen" width="55" height="55" /></a>
+<a href="https://nodejs.org/en"><img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/34e25406-555d-48f4-b93f-f92e6c6807e5" alt="Home_screen" width="55" height="55" /></a>
+<a href="https://expressjs.com/"><img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/bfbc5afd-09e7-43c1-b237-0cf7ecf86074" alt="Home_screen" width="55" height="55" /></a>
+<a href="https://www.mysql.com/"><img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/95a49a2d-ac1c-4530-b75a-a34559b04ca5" alt="Home_screen" width="55" height="55" /></a>
+<a href="https://sequelize.org/"><img src="https://github.com/aryanGupta-09/Nexus_Mart/assets/97445947/f42dab55-46e4-4b08-ab45-9ac245d03eb3" alt="Home_screen" width="55" height="55" /></a>
 
 ## Installation
 
