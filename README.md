@@ -13,6 +13,7 @@ The admins can add/delete/modify product categories and products, and the users 
 <a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Expressjs.svg" width="45" height="45" alt="Express.js" /></a>
 <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/MySQL.svg" width="45" height="45" alt="MySQL" /></a>
 <a href="https://sequelize.org/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Sequelize.png" width="42" height="48" alt="Sequelize" /></a>
+<a href="https://www.passportjs.org/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Passportjs.png" width="42" height="47" alt="Passport.js" /></a>
 
 ## Installation
 
