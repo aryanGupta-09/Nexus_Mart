@@ -6,16 +6,17 @@ The platform includes distinct interfaces for both customers and administrators,
 
 ## Tech Stack
 
-<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Languages/HTML.svg" width="45" height="45" alt="HTML5" /></a>
-<a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Languages/CSS.svg" width="45" height="45" alt="CSS3" /></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Languages/JavaScript.svg" width="45" height="45" alt="JavaScript" /></a>
-<a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Sass.svg" width="45" height="45" alt="Sass" /></a>
-<a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Bootstrap.svg" width="48" height="48" alt="Bootstrap" /></a>
-<a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Nodejs.svg" width="45" height="45" alt="Node.js" /></a>
-<a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Expressjs.svg" width="45" height="45" alt="Express.js" /></a>
-<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/MySQL.svg" width="45" height="45" alt="MySQL" /></a>
-<a href="https://sequelize.org/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Sequelize.png" width="42" height="48" alt="Sequelize" /></a>
-<a href="https://www.passportjs.org/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Passportjs.png" width="42" height="47" alt="Passport.js" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Languages/HTML.svg" width="45" height="45" alt="HTML5" title="HTML5" /></a>
+<a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Languages/CSS.svg" width="45" height="45" alt="CSS3" title="CSS3" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Languages/JavaScript.svg" width="45" height="45" alt="JavaScript" title="JavaScript" /></a>
+<a href="https://sass-lang.com/" target="_blank" rel="noreferrer" title="Sass"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Sass.svg" width="45" height="45" alt="Sass" /></a>
+<a href="https://getbootstrap.com/" target="_blank" rel="noreferrer" title="Bootstrap"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Bootstrap.svg" width="45" height="45" alt="Bootstrap" /></a>
+<a href="https://nodejs.org/en/" target="_blank" rel="noreferrer" title="Node.js"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Nodejs.svg" width="45" height="45" alt="Node.js" /></a>
+<a href="https://expressjs.com/" target="_blank" rel="noreferrer" title="Express.js"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Expressjs.svg" width="45" height="45" alt="Express.js" /></a>
+<a href="https://www.mysql.com/" target="_blank" rel="noreferrer" title="MySQL"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/MySQL.svg" width="45" height="45" alt="MySQL" /></a>
+<a href="https://sequelize.org/" target="_blank" rel="noreferrer" title="Sequelize"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Sequelize.png" width="45" height="50" alt="Sequelize" /></a>
+<a href="https://jwt.io/" target="_blank" rel="noreferrer" title="JWT"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/JWT.png" alt="JWT" width="47" height="47"/></a>
+<a href="https://www.passportjs.org/" target="_blank" rel="noreferrer" title="Passport.js"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Web%20Development/Passportjs.png" width="40" height="45" alt="Passport.js" /></a>
 
 ## Installation
 
