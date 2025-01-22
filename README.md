@@ -1,8 +1,8 @@
 # Nexus_Mart
 
-A comprehensive e-commerce platform delivering a seamless, intuitive shopping experience with user-friendly design and optimized performance. It features a secure backend infrastructure with robust user authentication, ensuring 100% data protection and privacy.
+NexusMart is a comprehensive e-commerce platform designed to deliver a seamless and intuitive shopping experience by leveraging the MVC (Model-View-Controller) architecture and integrating RESTful APIs for efficient data exchange.
 
-The platform includes distinct interfaces for both customers and administrators, facilitating efficient product management and a streamlined purchasing process.
+It features a secure backend infrastructure built with Node.js, Express.js, MySQL, and Sequelize, complemented by Passport.js and JWT for robust user authentication, ensuring 100% data protection and privacy.
 
 ## Tech Stack
 
